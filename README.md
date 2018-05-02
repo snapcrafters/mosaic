@@ -6,11 +6,8 @@
 
 <p align="center"><b>This is the snap for Mosaic</b>, <i>"NCSA Mosaic 2.7, one of the first graphical web browsers."</i>. It works on Ubuntu, Fedora, Debian, and other major Linux distributions.</p>
 
-<!-- Uncomment and modify this when you are provided a build status badge
 <p align="center">
-<a href="https://build.snapcraft.io/user/snapcrafters/fork-and-rename-me"><img src="https://build.snapcraft.io/badge/snapcrafters/fork-and-rename-me.svg" alt="Snap Status"></a>
-</p>
--->
+[![Snap Status](https://build.snapcraft.io/badge/snapcrafters/mosaic.svg)](https://build.snapcraft.io/user/snapcrafters/mosaic)
 
 ## Install
 
