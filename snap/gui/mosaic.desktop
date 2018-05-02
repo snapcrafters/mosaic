@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Name=NCSA Mosaic
+Exec=mosaic
+Icon=${SNAP}/meta/gui/mosaic.png
+Terminal=false
+StartupWMClass=Mosaic
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;x-scheme-handler/http;x-scheme-handler/ftp;x-scheme-handler/wais;x-scheme-handler/gopher;x-scheme-handler/news
