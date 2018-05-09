@@ -26,7 +26,8 @@ parts:
         cd ../src
         git checkout "${last_committed_tag}"
       fi
-      snapcraftctl build    plugin: make
+      snapcraftctl build
+    plugin: make
     build-packages: [libmotif-dev, libjpeg62-dev, libpng12-dev, x11proto-print-dev, libxmu-headers, libxpm-dev, libxmu-dev]
     source: https://github.com/alandipert/ncsa-mosaic
     source-type: git
