@@ -1,6 +1,5 @@
 name: mosaic
-version: 'latest'
-version-script: git -C parts/mosaic/src describe --tags
+version: '2.7'
 description: |
   This is NCSA Mosaic 2.7, one of the first graphical web browsers.
 summary: NCSA Mosaic
@@ -15,18 +14,6 @@ apps:
 
 parts:
   mosaic:
-    override-build: |
-      last_committed_tag="$(git describe --tags --abbrev=0)"
-      last_released_tag="$(snap info mosaic | awk '$1 == "beta:" { print $2 }')"
-      # If the latest tag from the upstream project has not been released to
-      # beta, build that tag instead of master.
-      if [ "${last_committed_tag}" != "${last_released_tag}" ]; then
-        git fetch
-        git checkout "${last_committed_tag}"
-        cd ../src
-        git checkout "${last_committed_tag}"
-      fi
-      snapcraftctl build
     plugin: make
     build-packages: [libmotif-dev, libjpeg62-dev, libpng12-dev, x11proto-print-dev, libxmu-headers, libxpm-dev, libxmu-dev]
     source: https://github.com/alandipert/ncsa-mosaic
