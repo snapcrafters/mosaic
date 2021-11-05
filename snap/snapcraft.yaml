@@ -1,24 +1,49 @@
 name: mosaic
-version: '2.7'
+version: "2.7"
+base: core20
+summary: NCSA Mosaic
 description: |
   This is NCSA Mosaic 2.7, one of the first graphical web browsers.
-summary: NCSA Mosaic
-
 confinement: strict
 grade: stable
 
 apps:
   mosaic:
     command: Mosaic
-    plugs: [network,x11]
+    plugs:
+      - network
+      - x11
 
 parts:
   mosaic:
-    plugin: make
-    build-packages: [libmotif-dev, libjpeg62-dev, libpng12-dev, x11proto-print-dev, libxmu-headers, libxpm-dev, libxmu-dev]
-    source: https://github.com/alandipert/ncsa-mosaic
-    source-type: git
-    make-parameters: [linux]
-    artifacts: [src/Mosaic]
-    organize:
-      src/Mosaic: .
+    plugin: nil
+    source: https://github.com/yotann/ncsa-mosaic.git
+    source-commit: 5d3543df9bf58224b987309fcdf0abac483e8c18
+    build-packages:
+      - libmotif-dev
+      - libjpeg62-dev
+      - libpng-dev
+      - libxmu-headers
+      - libxpm-dev
+      - libxmu-dev
+    stage-packages:
+      - libfontconfig1
+      - libfreetype6
+      - libice6
+      - libjpeg-turbo8
+      - libjpeg62
+      - libpng16-16
+      - libsm6
+      - libx11-6
+      - libxau6
+      - libxcb1
+      - libxdmcp6
+      - libxext6
+      - libxft2
+      - libxm4
+      - libxmu6
+      - libxrender1
+      - libxt6
+    override-build: |
+      make linux
+      install -m755 src/Mosaic "$SNAPCRAFT_PART_INSTALL"/Mosaic
