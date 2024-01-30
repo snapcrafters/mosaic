@@ -1,6 +1,6 @@
 name: mosaic
 version: "2.7"
-base: core20
+base: core22
 summary: NCSA Mosaic
 description: |
   This is NCSA Mosaic 2.7, one of the first graphical web browsers.
@@ -11,6 +11,7 @@ apps:
   mosaic:
     command: Mosaic
     plugs:
+      - home
       - network
       - x11
 
@@ -46,4 +47,4 @@ parts:
       - libxt6
     override-build: |
       make linux
-      install -m755 src/Mosaic "$SNAPCRAFT_PART_INSTALL"/Mosaic
+      install -m755 src/Mosaic "$CRAFT_PART_INSTALL"/Mosaic
