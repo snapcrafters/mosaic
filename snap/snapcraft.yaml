@@ -6,6 +6,13 @@ description: |
   This is NCSA Mosaic 2.7, one of the first graphical web browsers.
 confinement: strict
 grade: stable
+architectures:
+  - amd64
+  - arm64
+  - armhf
+  - ppc64el
+  - riscv64
+  - s390x
 
 apps:
   mosaic:
