@@ -8,8 +8,8 @@
 
 <p align="center">
 <a href="https://snapcraft.io/mosaic"><img src="https://snapcraft.io/mosaic/badge.svg" alt="Snap Status"></a>
-<a href="https://github.com/snapcrafters/mosaic/actions/workflows/release-to-candidate.yaml"><img src="https://github.com/snapcrafters/mosaic/actions/workflows/release-to-candidate.yaml/badge.svg"></a>
-<a href="https://github.com/snapcrafters/mosaic/actions/workflows/promote-to-stable.yaml"><img src="https://github.com/snapcrafters/mosaic/actions/workflows/promote-to-stable.yaml/badge.svg"></a>
+<a href="https://github.com/snapcrafters/mosaic/actions/workflows/release-to-candidate.yml"><img src="https://github.com/snapcrafters/mosaic/actions/workflows/release-to-candidate.yml/badge.svg"></a>
+<a href="https://github.com/snapcrafters/mosaic/actions/workflows/promote-to-stable.yml"><img src="https://github.com/snapcrafters/mosaic/actions/workflows/promote-to-stable.yml/badge.svg"></a>
 </p>
 
 <!-- Uncomment and modify this when you have a screenshot
